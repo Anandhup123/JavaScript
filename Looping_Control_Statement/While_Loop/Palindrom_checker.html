@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <input type="text" placeholder="Enter a positive integer" id="in">
+    <button onclick="palindrom()">Check</button>
+    <p id="output"></p>
+    <script>
+        function palindrom() {
+            var rev = 0;
+            var n = document.getElementById("in").value;
+            var temp = n;
+            while (n > 0) {
+                var rem = n % 10;
+                rev = (rev * 10) + rem;
+                n = parseInt(n / 10);
+            }
+            if (rev == temp) {
+                document.getElementById("output").innerHTML = temp + " is a palindrome";
+            } else {
+                document.getElementById("output").innerHTML = temp + " is not a palindrome";
+            }
+        }
+    </script>
+</body>
+</html>

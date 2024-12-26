@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Do You Want To Continue</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			color: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+		.container {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+		button {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		button:hover {
+			background-color: #0056b3;
+		}
+		#output {
+			margin-top: 20px;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Do You Want To Continue</h1>
+		<button onclick="startPrinting()">Start Printing</button>
+		<div id="output"></div>
+	</div>
+	<script>
+		function startPrinting() {
+			let i = 1;
+			const outputDiv = document.getElementById('output');
+			outputDiv.innerHTML = ''; // Clear previous output
+			do {
+				for (let j = i; j < i + 10; j++) {
+					const p = document.createElement('p');
+					p.textContent = j;
+					outputDiv.appendChild(p);
+				}
+				i += 10;
+				var userResponse = prompt("Do you want to continue printing numbers? (yes/no)");
+			} while (userResponse && userResponse.toLowerCase() === 'yes');
+		}
+	</script>
+</body>
+</html>

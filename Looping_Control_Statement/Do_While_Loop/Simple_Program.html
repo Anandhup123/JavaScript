@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Do-While Loop Example</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 20px;
+		}
+		h1 {
+			color: #333;
+		}
+		#output {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin-top: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body>
+	<h1>Do-While Loop Example</h1>
+	<p id="output"></p>
+
+	<script>
+		let result = '';
+		let i = 0;
+
+		do {
+			result += 'The number is ' + i + '<br>';
+			i++;
+		} while (i < 5);
+
+		document.getElementById('output').innerHTML = result;
+	</script>
+</body>
+</html>
