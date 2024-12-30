@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replace Substring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            color: purple;
+        }
+		input, button {
+			margin: 5px 0;
+			padding: 10px;
+			font-size: 16px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+    </style>
+</head>
+<body>
+    <h2>Replace a Substring</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <input type="text" id="findString" placeholder="Substring to replace">
+    <input type="text" id="replaceString" placeholder="Replacement string">
+    <button onclick="replaceSubstring()">Replace</button>
+    <p id="result"></p>
+
+    <script>
+        function replaceSubstring() {
+            const str = document.getElementById("inputString").value;
+            const find = document.getElementById("findString").value;
+            const replace = document.getElementById("replaceString").value;
+            document.getElementById("result").innerText = "Result: " + str.replace(find, replace);
+        }
+    </script>
+</body>
+</html>

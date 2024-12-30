@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Length</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            color: green;
+        }
+		input, button {
+			margin-top: 10px;
+			padding: 5px;
+			font-size: 16px;
+		}
+		h2 {
+			color: blue;
+		}
+    </style>
+</head>
+<body>
+    <h2>Find the Length of a String</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="findLength()">Find Length</button>
+    <p id="result"></p>
+
+    <script>
+        function findLength() {
+            const str = document.getElementById("inputString").value;
+            document.getElementById("result").innerText = "Length: " + str.length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Substring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            color: orange;
+        }
+		body {
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 20px;
+		}
+		h2 {
+			color: #333;
+		}
+		input, button {
+			margin: 10px 0;
+			padding: 10px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		#result {
+			margin-top: 20px;
+			font-size: 18px;
+		}
+    </style>
+</head>
+<body>
+    <h2>Extract a Substring</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <input type="number" id="startIndex" placeholder="Start index">
+    <input type="number" id="endIndex" placeholder="End index">
+    <button onclick="extractSubstring()">Extract</button>
+    <p id="result"></p>
+
+    <script>
+        function extractSubstring() {
+            const str = document.getElementById("inputString").value;
+            const start = parseInt(document.getElementById("startIndex").value);
+            const end = parseInt(document.getElementById("endIndex").value);
+            document.getElementById("result").innerText = "Substring: " + str.substring(start, end);
+        }
+    </script>
+</body>
+</html>

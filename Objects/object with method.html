@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+    <title>Method with this</title>
+</head>
+<body>
+    <h2>Method Using this</h2>
+    <script>
+        let calculator = {
+            a: 10,
+            b: 5,
+            add: function() {
+                return this.a + this.b;
+            },
+            subtract: function() {
+                return this.a - this.b;
+            }
+        };
+
+        document.write("Addition: " + calculator.add() + "<br>");       // Outputs: Addition: 15
+        document.write("Subtraction: " + calculator.subtract() + "<br>"); // Outputs: Subtraction: 5
+    </script>
+</body>
+</html>

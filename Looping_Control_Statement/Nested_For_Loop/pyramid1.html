@@ -3,19 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pyramid Pattern</title>
+  <style>
+    .pyramid {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      white-space: pre;
+    }
+  </style>
 </head>
 <body>
-  <script>
-    let rows = 5; // You can change this value for different sizes
-
-for (let i = 1; i <= rows; i++) {
-  let output = "";
-  for (let j = 1; j <= i; j++) {
-    output += "* ";
-  }
-  console.log(output);
-}
-  </script>
+  <div class="pyramid" id="pyramid"></div>
 </body>
 </html>
+<script>
+  function generatePyramid(rows) {
+    let pyramid = '';
+    for (let i = 1; i <= rows; i++) {
+      for (let j = 1; j <= rows - i; j++) {
+        pyramid += ' ';
+      }
+      for (let k = 1; k <= 2 * i - 1; k++) {
+        pyramid += '*';
+      }
+      pyramid += '\n';
+    }
+    return pyramid;
+  }
+
+  document.getElementById('pyramid').textContent = generatePyramid(5);
+</script>

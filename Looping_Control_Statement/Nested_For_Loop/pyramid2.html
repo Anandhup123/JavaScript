@@ -9,13 +9,16 @@
   <script>
     let rows = 5; // You can change this value for different sizes
 
-for (let i = rows; i >= 1; i--) {
-  let output = "";
-  for (let j = 1; j <= i; j++) {
-    output += "* ";
-  }
-  console.log(output);
-}
+    for (let i = rows; i >= 1; i--) {
+      let output = "";
+      for (let j = 1; j <= i; j++) {
+        output += "* ";
+      }
+      // Create a new paragraph element and append it to the body
+      let p = document.createElement("p");
+      p.textContent = output;
+      document.body.appendChild(p);
+    }
   </script>
 </body>
 </html>

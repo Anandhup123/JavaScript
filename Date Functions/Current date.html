@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single-Line: Current Date</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 20px;
+		}
+		h2 {
+			color: #333;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		#result {
+			margin-top: 20px;
+			font-size: 18px;
+			color: #555;
+		}
+	</style>
+</head>
+<body>
+    <h2>Get Current Date</h2>
+    <button onclick="document.getElementById('result').innerText = new Date().toDateString()">Show Date</button>
+    <p id="result"></p>
+</body>
+</html>

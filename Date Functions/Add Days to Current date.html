@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		h2 {
+			color: #333;
+		}
+		input {
+			margin-right: 10px;
+			padding: 5px;
+		}
+		button {
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+		p {
+			margin-top: 20px;
+			font-weight: bold;
+		}
+	</style>
+    <title>Single-Line: Add Days</title>
+</head>
+<body>
+    <h2>Add Days</h2>
+    <input type="number" id="daysToAdd" placeholder="Enter days">
+    <button onclick="document.getElementById('result').innerText = new Date(new Date().setDate(new Date().getDate() + parseInt(document.getElementById('daysToAdd').value))).toDateString()">Add</button>
+    <p id="result"></p>
+</body>
+</html>

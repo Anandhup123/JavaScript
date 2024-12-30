@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		h2 {
+			color: #333;
+		}
+		input[type="date"] {
+			margin: 10px 0;
+			padding: 5px;
+			font-size: 16px;
+		}
+		button {
+			padding: 10px 15px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		p#result {
+			margin-top: 20px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	</style>
+    <title>Single-Line: Days Between Dates</title>
+</head>
+<body>
+    <h2>Days Between Dates</h2>
+    <input type="date" id="startDate">
+    <input type="date" id="endDate">
+    <button onclick="document.getElementById('result').innerText = Math.ceil((new Date(document.getElementById('endDate').value) - new Date(document.getElementById('startDate').value)) / (1000 * 60 * 60 * 24)) + ' days'">Calculate</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            color: blue;
+        }
+		input[type="text"] {
+			padding: 10px;
+			margin: 10px 0;
+			width: 300px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+    </style>
+</head>
+<body>
+    <h2>Convert String to Uppercase</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="convertToUpper()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convertToUpper() {
+            const str = document.getElementById("inputString").value;
+            document.getElementById("result").innerText = "Uppercase: " + str.toUpperCase();
+        }
+    </script>
+</body>
+</html>

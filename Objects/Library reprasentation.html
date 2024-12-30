@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 20px;
+    }
+    h2 {
+        color: #333;
+    }
+    .library-info {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+    <title>Library Object</title>
+</head>
+<body>
+    <h2>Library Object Example</h2>
+    <script>
+        let library = {
+            name: "City Library",
+            books: ["The Great Gatsby", "1984", "To Kill a Mockingbird"],
+            listBooks: function() {
+                document.write("Books available in " + this.name + ":<br>");
+                this.books.forEach((book, index) => {
+                    document.write(index + 1 + ". " + book + "<br>");
+                });
+            },
+            addBook: function(newBook) {
+                this.books.push(newBook);
+                document.write(newBook + " has been added to the library.<br>");
+            }
+        };
+
+        library.listBooks();
+        library.addBook("Moby Dick");
+        library.listBooks();
+    </script>
+</body>
+</html>

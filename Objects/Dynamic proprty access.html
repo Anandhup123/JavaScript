@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+
+		h2 {
+			color: #333;
+		}
+
+		/* script {
+			display: block;
+			margin-top: 20px;
+		} */
+	</style>
+    <title>Dynamic Property Access</title>
+</head>
+<body>
+    <h2>Dynamic Property Access Example</h2>
+    <script>
+        let book = {
+            title: "JavaScript Essentials",
+            author: "John Smith",
+            pages: 350
+        };
+
+        let propertyName = "title";
+        document.write(book[propertyName]); // Outputs: JavaScript Essentials
+    </script>
+</body>
+</html>

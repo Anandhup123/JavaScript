@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		h2 {
+			color: #333;
+		}
+		script {
+			display: none;
+		}
+	</style>
+    <title>Recipe Object</title>
+</head>
+<body>
+    <h2>Recipe Object Example</h2>
+    <script>
+        let recipe = {
+            name: "Pancakes",
+            ingredients: ["Flour", "Milk", "Eggs", "Sugar", "Butter"],
+            steps: [
+                "Mix all ingredients",
+                "Heat a pan and grease it with butter",
+                "Pour the batter and cook both sides",
+                "Serve with syrup or toppings of your choice"
+            ],
+            showIngredients: function() {
+                document.write("Ingredients for " + this.name + ": " + this.ingredients.join(", ") + "<br>");
+            },
+            showSteps: function() {
+                document.write("Steps to make " + this.name + ":<br>");
+                this.steps.forEach((step, index) => {
+                    document.write(index + 1 + ". " + step + "<br>");
+                });
+            }
+        };
+
+        recipe.showIngredients();
+        recipe.showSteps();
+    </script>
+</body>
+</html>
