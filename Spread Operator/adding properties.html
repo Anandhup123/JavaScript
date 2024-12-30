@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spread Operator - Extend Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ede7f6;
+            color: #673ab7;
+            padding: 20px;
+        }
+        pre {
+            background-color: #d1c4e9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Adding Properties to an Object</h2>
+    <pre id="output"></pre>
+    <script>
+        let baseObject = { name: "John", age: 30 };
+        let extendedObject = { ...baseObject, gender: "Male" };
+
+        document.getElementById("output").innerText =
+            "Base Object: " + JSON.stringify(baseObject) + "\n" +
+            "Extended Object: " + JSON.stringify(extendedObject);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Set Example 5</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+			padding: 20px;
+		}
+		h2 {
+			color: #4CAF50;
+		}
+		#output {
+			font-size: 18px;
+			color: #333;
+			padding: 10px;
+			background-color: #e0e0e0;
+			border-radius: 5px;
+			width: 250px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Converting a Set to an Array</h2>
+	<p id="output"></p>
+
+	<script>
+		// Example 5: Convert Set to Array
+		const mySet = new Set([1, 2, 3, 4, 5]);
+
+		// Display the Set
+		document.getElementById("output").innerText = `Original Set: ${[...mySet]}`;
+
+		// Convert Set to Array
+		const myArray = [...mySet];
+
+		// Display the Array
+		document.getElementById("output").innerText += `\nConverted Array: ${myArray}`;
+	</script>
+</body>
+</html>

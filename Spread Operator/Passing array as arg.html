@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spread Operator - Arguments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            color: #e65100;
+            padding: 20px;
+        }
+        pre {
+            background-color: #ffe0b2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Passing Array as Arguments</h2>
+    <pre id="output"></pre>
+    <script>
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+
+        let numbers = [10, 20, 30];
+        let result = sum(...numbers);
+
+        document.getElementById("output").innerText =
+            "Numbers: " + JSON.stringify(numbers) + "\n" +
+            "Sum: " + result;
+    </script>
+</body>
+</html>

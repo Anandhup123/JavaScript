@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>map() - Add 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fef5e7;
+            color: #a04000;
+            padding: 20px;
+        }
+        pre {
+            background-color: #fbe4d5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Adding 10 to Each Number</h2>
+    <pre id="output"></pre>
+    <script>
+        let numbers = [5, 10, 15, 20];
+        let added = numbers.map(num => num + 10);
+
+        document.getElementById("output").innerText =
+            "Original Array: " + JSON.stringify(numbers) + "\n" +
+            "Added 10 Array: " + JSON.stringify(added);
+    </script>
+</body>
+</html>

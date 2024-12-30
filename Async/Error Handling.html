@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function Example 2</title>
+</head>
+<body>
+    <h2>Async Function with Error Handling</h2>
+    <p id="output">Fetching data...</p>
+
+    <script>
+        // Example 2: Async function with try-catch for error handling
+        async function fetchData() {
+            try {
+                let data = await new Promise((resolve, reject) => {
+                    // Simulating a failure (error)
+                    setTimeout(() => {
+                        reject("Failed to fetch data!");
+                    }, 2000); // Simulate a failure after 2 seconds
+                });
+
+                return data;
+            } catch (error) {
+                return error; // Catching error and returning the error message
+            }
+        }
+
+        // Call the async function
+        fetchData().then(result => {
+            document.getElementById("output").innerText = result; // Display the error message
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function Example 3</title>
+</head>
+<body>
+    <h2>Simulating User Authentication</h2>
+    <p id="output">Authenticating user...</p>
+
+    <script>
+        // Example 3: Simulate user authentication with async/await
+        async function authenticateUser(username, password) {
+            // Simulate checking credentials
+            let isAuthenticated = await new Promise((resolve) => {
+                setTimeout(() => {
+                    // Simulate successful login if username is 'user' and password is 'pass'
+                    if (username === "user" && password === "pass") {
+                        resolve("User authenticated successfully!");
+                    } else {
+                        resolve("Invalid username or password!");
+                    }
+                }, 2000); // Wait for 2 seconds
+            });
+
+            return isAuthenticated;
+        }
+
+        // Simulating authentication attempt
+        authenticateUser("user", "pass").then(result => {
+            document.getElementById("output").innerText = result; // Display authentication result
+        });
+    </script>
+</body>
+</html>

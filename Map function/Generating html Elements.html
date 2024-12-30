@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>map() - Generate HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ede7f6;
+            color: #512da8;
+            padding: 20px;
+        }
+        ul {
+            background-color: #d1c4e9;
+            padding: 15px;
+            border-radius: 5px;
+            list-style-type: none;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Generating HTML Elements</h2>
+    <ul id="list"></ul>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let fruitList = fruits.map(fruit => `<li>${fruit}</li>`).join("");
+
+        document.getElementById("list").innerHTML = fruitList;
+    </script>
+</body>
+</html>

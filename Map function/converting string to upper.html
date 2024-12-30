@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>map() - Uppercase Strings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            color: #e65100;
+            padding: 20px;
+        }
+        pre {
+            background-color: #ffe0b2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Converting Strings to Uppercase</h2>
+    <pre id="output"></pre>
+    <script>
+        let words = ["hello", "world", "javascript", "map"];
+        let uppercased = words.map(word => word.toUpperCase());
+
+        document.getElementById("output").innerText =
+            "Original Array: " + JSON.stringify(words) + "\n" +
+            "Uppercased Array: " + JSON.stringify(uppercased);
+    </script>
+</body>
+</html>

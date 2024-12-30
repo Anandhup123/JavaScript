@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spread Operator - Copy Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #1e88e5;
+            padding: 20px;
+        }
+        pre {
+            background-color: #bbdefb;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Copying an Object</h2>
+    <pre id="output"></pre>
+    <script>
+        let originalObject = { name: "Alice", age: 25 };
+        let copiedObject = { ...originalObject };
+
+        document.getElementById("output").innerText =
+            "Original Object: " + JSON.stringify(originalObject) + "\n" +
+            "Copied Object: " + JSON.stringify(copiedObject);
+    </script>
+</body>
+</html>

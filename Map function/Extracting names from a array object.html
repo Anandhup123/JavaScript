@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>map() - Extract Names</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 20px;
+        }
+        pre {
+            background-color: #c8e6c9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Extracting Names from an Array of Objects</h2>
+    <pre id="output"></pre>
+    <script>
+        let people = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 35 }
+        ];
+        let names = people.map(person => person.name);
+
+        document.getElementById("output").innerText =
+            "Original Array: " + JSON.stringify(people, null, 2) + "\n" +
+            "Extracted Names: " + JSON.stringify(names);
+    </script>
+</body>
+</html>

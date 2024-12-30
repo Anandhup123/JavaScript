@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Set Example 3</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+			padding: 20px;
+		}
+		h2 {
+			color: #4CAF50;
+		}
+		#output {
+			font-size: 18px;
+			color: #333;
+			padding: 10px;
+			background-color: #e0e0e0;
+			border-radius: 5px;
+			width: 300px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Removing a Value from a Set</h2>
+	<p id="output"></p>
+
+	<script>
+		// Example 3: Remove a value from a Set
+		const mySet = new Set([1, 2, 3, 4, 5]);
+
+		// Display the previous Set
+		const previousSet = [...mySet];
+
+		// Remove value 3 from the Set
+		mySet.delete(3);
+
+		// Display the updated Set
+		const updatedSet = [...mySet];
+
+		document.getElementById("output").innerText = `Previous Set: ${previousSet}\nUpdated Set: ${updatedSet}`;
+	</script>
+</body>
+</html>
